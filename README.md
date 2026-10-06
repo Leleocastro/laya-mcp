@@ -120,7 +120,7 @@ whether an answer means anything:
 ```bash
 laya-mcp install --with-skill   # MCP registration + SKILL.md for every harness found
 laya-mcp install --skill-only   # just the SKILL.md, no server registration
-laya-mcp install --with-skill --harness cursor,claude  # only these two
+laya-mcp install --with-skill --harness cursor,claude  # only these two, if detected
 laya-mcp install --skill-only --dry-run  # print the paths, write nothing
 ```
 

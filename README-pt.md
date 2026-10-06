@@ -79,7 +79,7 @@ Registar o servidor é só metade da instalação. Sem a skill, o harness vê ci
 ```bash
 laya-mcp install --with-skill   # registo MCP + SKILL.md para cada harness encontrado
 laya-mcp install --skill-only   # só o SKILL.md, sem registo do servidor
-laya-mcp install --with-skill --harness cursor,claude  # só estes dois
+laya-mcp install --with-skill --harness cursor,claude  # só estes dois, se detetados
 laya-mcp install --skill-only --dry-run  # mostra os caminhos, não escreve nada
 ```
 

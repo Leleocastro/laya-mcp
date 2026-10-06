@@ -197,7 +197,7 @@ def build_parser() -> argparse.ArgumentParser:
     install = sub.add_parser("install", help="register this server with the agent harnesses you have")
     install.add_argument(
         "--harness", default=None,
-        help="target one harness by id; default is every harness detected",
+        help="target installed harnesses by id (filters what was detected); default is every harness detected",
     )
     install.add_argument("--name", default="laya", help="the server name to register (default: laya)")
     install.add_argument(

@@ -79,7 +79,7 @@ Laya 会静默地截断东西，而这些省略恰恰是你在依据错误答案
 ```bash
 laya-mcp install --with-skill   # 为每个找到的 harness 注册 MCP + 写 SKILL.md
 laya-mcp install --skill-only   # 只写 SKILL.md，不注册 server
-laya-mcp install --with-skill --harness cursor,claude  # 只装这两个
+laya-mcp install --with-skill --harness cursor,claude  # 只装这两个（如果能检测到）
 laya-mcp install --skill-only --dry-run  # 只打印路径，不写任何东西
 ```
 

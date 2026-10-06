@@ -79,7 +79,7 @@ MCP सर्वर पंजीकृत करने का कोई पो�
 ```bash
 laya-mcp install --with-skill   # मिले हर harness के लिए MCP पंजीकरण + SKILL.md
 laya-mcp install --skill-only   # केवल SKILL.md, सर्वर पंजीकरण नहीं
-laya-mcp install --with-skill --harness cursor,claude  # केवल ये दो
+laya-mcp install --with-skill --harness cursor,claude  # केवल ये दो, अगर पहचाने गए
 laya-mcp install --skill-only --dry-run  # केवल पथ दिखाएँ, कुछ न लिखें
 ```
 

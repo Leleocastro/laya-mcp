@@ -338,9 +338,13 @@ def main_skills() -> int:
 
     print("\ninstall --skill-only end to end, in a fake HOME")
     real_home = os.environ.get("HOME")
+    real_profile = os.environ.get("USERPROFILE")
     fake_home = tempfile.mkdtemp(prefix="laya-mcp-fakehome-")
     try:
         os.environ["HOME"] = fake_home
+        # Windows resolves `~` from USERPROFILE, not HOME, so redirecting HOME
+        # alone leaves the real profile in place and nothing here is exercised.
+        os.environ["USERPROFILE"] = fake_home
         # A cursor config that already exists marks the harness present even
         # with no `cursor` binary on PATH - the same rule as the real detector.
         cursor_config = Path(fake_home) / ".cursor" / "mcp.json"
@@ -359,6 +363,10 @@ def main_skills() -> int:
             os.environ.pop("HOME", None)
         else:
             os.environ["HOME"] = real_home
+        if real_profile is None:
+            os.environ.pop("USERPROFILE", None)
+        else:
+            os.environ["USERPROFILE"] = real_profile
         shutil.rmtree(fake_home, ignore_errors=True)
 
     print()
